@@ -1,0 +1,13 @@
+.style-borders > h1{
+    text-align: center;
+}
+.style-borders > p {
+    /* border-style: dotted ;
+    border-width: 5px;
+    border-color: green;
+    border-left-style: double;
+    border-bottom-color: hotpink; */
+    border: 6px double hotpink;
+    border-top: 3px dotted hotpink;
+    border-radius: 15px;
+}

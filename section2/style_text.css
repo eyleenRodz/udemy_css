@@ -1,0 +1,17 @@
+.style-text > h1{
+    color: blue;
+    text-align: center;
+    font-style: italic;
+    text-decoration: green;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+}
+.style-text > p {
+    color: brown;
+    text-align: justify;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    line-height: 1;
+    font-family: 'Nunito', sans-serif;
+}

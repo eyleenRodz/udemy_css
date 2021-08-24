@@ -4,45 +4,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./section2/style_text.css" type="text/css">
   <title>Document</title>
   <style>
     body>div{
       display: none;
     }
-    .active {
-      display: inline;
+    #title_section {
+      font-size: large;
+      text-transform: capitalize;
+      font-style:normal;
+      font-weight: bold;
+      padding-top: 40px;
+      padding-bottom: 40px;
+
     }
   </style>
   <script>
     let currentSection = 1; 
     let links = [[], 
       ["./section2/text.css"]]
+    let topics = [
+      "", "Basic Styles"
+    ]
     
     function show(){
       let number = document.getElementById('number_section').value;
-      alert(number);
-      let items = document.querySelectorAll('body>div');
-      items.forEach(div => {
-        if(div.id == "section"+number){
-          div.className="active"
-        }
-        else{
-          div.className=""
-        }
-      });
+      document.location.href=`./section${number}/index.html`
     }
-
-
+    function change(){
+      let number = document.getElementById('number_section').value;
+      let title = document.getElementById('title_section');
+      title.innerHTML = `${number}. ${topics[number-1]}`
+    }
   </script>
 </head>
 <body>
-  <input id="number_section" type="number" min="1" max="12" /><button onclick="show()">Show</button>
+  Seleccionar una seccion para ver el tema. 
+  <input id="number_section" type="number" min="2" max="12" onchange="change()" /> 
   <br>
-  <div id="section1" class="active">
-    hi
-  </div>
-  <div id="section1">
-    sec
-  </div>
+  <span id="title_section">-------</span>
+  <br>
+  <button onclick="show()">Show</button>
+  <br>
 </body>
 </html>
